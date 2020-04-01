@@ -14,6 +14,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatSidenavModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

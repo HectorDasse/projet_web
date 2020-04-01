@@ -1,13 +1,23 @@
-<button mat-button [matMenuTriggerFor]="menu">Où allez-vous?</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Retour à l'accueil</button>
-  <button mat-menu-item>Retour aux interventions</button>
-</mat-menu>
+<mat-drawer-container class="example-container" appearance="fill">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Choisissez votre destination</p>
+    <p><button mat-raised-button>
+      Accueil
+    </button></p>
+    <p><button  mat-raised-button>
+      Interventions
+      </button></p>
+    <p><button routerLink="/creation" mat-raised-button>
+      Création d'une intervention
+      </button></p>
+  </mat-drawer>
 
-<mat-drawer-container class="drawer-container">
-  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-  <mat-drawer-content>Main content</mat-drawer-content>
-</mat-drawer-container>
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Menu de Navigation
+    </button>
+  </div>
+
 
 <div class="example-container">
   <mat-form-field appearance="fill">
@@ -62,6 +72,7 @@
     <textarea matInput></textarea>
   </mat-form-field>
 </div>
+</mat-drawer-container>
 
 
 
