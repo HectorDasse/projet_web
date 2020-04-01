@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TableComponent } from './composent/table/table.component';
 import { AddInterventionComponent} from './add-intervention/add-intervention.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -18,6 +19,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   declarations: [
     AppComponent,
     AddInterventionComponent,
+    AppComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
