@@ -17,12 +17,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     AddInterventionComponent,
     AppComponent,
-    TableComponent
+    TableComponent,
+
   ],
   imports: [
     BrowserModule,

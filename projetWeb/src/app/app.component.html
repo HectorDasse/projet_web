@@ -1,5 +1,27 @@
-<mat-toolbar>Gestion des interventions</mat-toolbar>
-<app-add-intervention></app-add-intervention>
-<app-table></app-table>
 
-<router-outlet></router-outlet>
+
+<mat-drawer-container class="example-container" appearance="fill">
+  <mat-toolbar>
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Menu
+    </button>
+    Gestion des interventions
+  </mat-toolbar>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Choisissez votre destination</p>
+    <p><button mat-raised-button>
+      Accueil
+    </button></p>
+    <p><button routerLink="/interventions" mat-raised-button>
+      Interventions
+    </button></p>
+    <p><button routerLink="/creation" mat-raised-button>
+      Création d'une intervention
+    </button></p>
+  </mat-drawer>
+
+  <router-outlet></router-outlet>
+</mat-drawer-container>
+
+
+
