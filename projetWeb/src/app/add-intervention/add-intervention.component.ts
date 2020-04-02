@@ -8,6 +8,8 @@ import {Component, OnInit} from '@angular/core';
 export class AddInterventionComponent implements OnInit {
 
   public inputContent: string;
+  public ServiceCo: string;
+  public ServiceTech: string;
 
   constructor() {
   }

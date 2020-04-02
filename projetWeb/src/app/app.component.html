@@ -2,13 +2,13 @@
 
 <mat-drawer-container class="example-container" appearance="fill">
   <mat-toolbar>
-    <button type="button" mat-button (click)="drawer.toggle()">
+    <button type="button" mat-raised-button (click)="drawer.toggle()">
       Menu
     </button>
-    Gestion des interventions
+    <p mat-card-title>Gestion des interventions</p>
   </mat-toolbar>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Choisissez votre destination</p>
+    <p mat-card-subtitle >Choisissez votre destination</p>
     <p><button mat-raised-button routerLink="/">
       Accueil
     </button></p>

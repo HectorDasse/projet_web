@@ -1,13 +1,19 @@
-
-
-.Title-container {
+.form-container {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #eee;
+  top: 10%;
+  bottom: 10%;
+  left: 25%;
+  right: 25%;
+
 }
+
+.mat-fab{
+  left : 50%;
+}
+
 mat-form-field {
-  margin-right: 12px;
+  display: block;
+  left: auto;
+  right: auto;
 }
+
