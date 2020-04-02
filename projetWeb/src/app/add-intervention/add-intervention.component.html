@@ -2,13 +2,13 @@
 
 <div class="form-container">
   <mat-form-field appearance="fill">
-    <mat-label>Date</mat-label>
+    <mat-label>mot clé</mat-label>
     <input matInput>
   </mat-form-field>
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Service créant l'intervention</mat-label>
-    <mat-select>
+    <mat-select [(value)]="formData.serviceCreation">
       <mat-option value="option">Service Commercial</mat-option>
       <mat-option value="option">Service Technique</mat-option>
       <mat-option value="option">Support</mat-option>
@@ -18,7 +18,7 @@
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Motif de l'intervention</mat-label>
-    <mat-select>
+    <mat-select [(value)]="formData.motif">
       <mat-option value="option">Hébergement</mat-option>
       <mat-option value="option">Cloud</mat-option>
       <mat-option value="option">Serveurs</mat-option>
@@ -27,8 +27,8 @@
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Service concerné</mat-label>
-    <mat-select>
-      <mat-option value="option">Service support 1</mat-option>
+    <mat-select [(value)]="formData.serviceConcerne">
+      <mat-option value="serviceSUpport1">Service  support 1</mat-option>
       <mat-option value="option">Service support 2</mat-option>
       <mat-option value="option">Service commercial 1</mat-option>
       <mat-option value="option">Service commercial 2 </mat-option>
@@ -40,7 +40,7 @@
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Niveau de priorité</mat-label>
-    <mat-select>
+    <mat-select [(ngModel)]="formData.priorite">
       <mat-option value="option">Normal</mat-option>
       <mat-option value="option">Urgent</mat-option>
       <mat-option value="option">Urgentissime</mat-option>
@@ -50,10 +50,10 @@
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Commentaire sur l'intervention</mat-label>
-    <textarea matInput></textarea>
+    <textarea matInput [(ngModel)]="formData.commentaire"></textarea>
   </mat-form-field>
   <br>
-  <button mat-fab type="submit">Valider</button>
+  <button mat-fab type="submit" (click)="submitForm()">Valider</button>
 
 </div>
 

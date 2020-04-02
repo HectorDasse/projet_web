@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {InterventionsService} from '../Services/interventions.service';
+import {Intervention} from '../models/intervention.model';
 
 @Component({
   selector: 'app-add-intervention',
@@ -6,15 +8,23 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./add-intervention.component.scss']
 })
 export class AddInterventionComponent implements OnInit {
+  public formData: Intervention = {
+    Date: Date.now().toLocaleString('fr-FR'),
+    commentaire: '',
+    motif: '',
+    priorite: '',
+    serviceConcerne: '',
+    serviceCreation: ''
+  };
 
-  public inputContent: string;
-  public ServiceCo: string;
-  public ServiceTech: string;
-
-  constructor() {
+  constructor(private interventionsService: InterventionsService) {
   }
 
   ngOnInit(): void {
+  }
+
+  public submitForm(): void {
+    this.interventionsService.addIntervention(this.formData);
   }
 }
 
